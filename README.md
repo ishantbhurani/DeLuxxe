@@ -7,6 +7,7 @@ This is a fully responsive e-commerce app called DeLuxxe. It support Google auth
 - [Overview](#overview)
   - [Features](#features)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -43,6 +44,10 @@ Users should be able to:
 
 | ![Loading Animation](./screenshots/loading.gif) |
 | ----------------------------------------------- |
+
+### Links
+
+- Live Site URL: [https://deluxxe.netlify.app/](https://deluxxe.netlify.app/)
 
 ## My process
 
