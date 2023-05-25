@@ -9,7 +9,7 @@ interface ProductItemType {
 
 export default function ProductItem({ product }: ProductItemType) {
   const { title, price, rating, thumbnail } = product
-  const { items, addToCart } = useAppConfig()
+  const { items, addToCart, removeFromCart } = useAppConfig()
 
   console.log(items)
 
@@ -55,6 +55,7 @@ export default function ProductItem({ product }: ProductItemType) {
       </Link>
       {items.find(item => item.id === product.id) ? (
         <button
+          onClick={() => removeFromCart(product.id)}
           title='Delete item from cart'
           className='absolute right-0 top-0 m-3 rounded bg-red-500 p-2 text-white opacity-0 shadow transition hover:bg-red-600 group-hover:opacity-100 group-focus-visible:opacity-100'
         >

@@ -9,6 +9,8 @@ export const AppContext = createContext({
   closeCart: () => {},
   // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
   addToCart: (_item: ItemType) => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
+  removeFromCart: (_id: number) => {},
 })
 
 export function AppProvider({ children }: { children: ReactNode }) {
@@ -27,9 +29,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setItems(items => [...items, item])
   }
 
+  const removeFromCart = (itemId: number) => {
+    setItems(items => items.filter(item => item.id !== itemId))
+  }
+
   return (
     <AppContext.Provider
-      value={{ isCartOpen, items, openCart, closeCart, addToCart }}
+      value={{
+        isCartOpen,
+        items,
+        openCart,
+        closeCart,
+        addToCart,
+        removeFromCart,
+      }}
     >
       {children}
     </AppContext.Provider>
