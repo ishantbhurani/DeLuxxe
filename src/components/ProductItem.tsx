@@ -15,8 +15,11 @@ export default function ProductItem({
   rating,
 }: ProductItemType) {
   return (
-    <li className='bg-white shadow'>
-      <Link to='#' className='group block overflow-hidden rounded'>
+    <li className='bg-white shadow focus-within:shadow-xl'>
+      <Link
+        to='#'
+        className='group block overflow-hidden rounded outline-transparent'
+      >
         <div className='overflow-hidden'>
           <img
             src={thumbnail}
