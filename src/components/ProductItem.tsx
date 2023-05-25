@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import StarIcon from '../assets/StarIcon'
 import { useAppConfig } from '../hooks/useAppConfig'
+import TrashIcon from '../assets/TrashIcon'
 
 interface ProductItemType {
   product: ItemType
@@ -8,7 +9,9 @@ interface ProductItemType {
 
 export default function ProductItem({ product }: ProductItemType) {
   const { title, price, rating, thumbnail } = product
-  const { addToCart } = useAppConfig()
+  const { items, addToCart } = useAppConfig()
+
+  console.log(items)
 
   return (
     <li className='group relative bg-white shadow focus-within:shadow-xl'>
@@ -50,12 +53,21 @@ export default function ProductItem({ product }: ProductItemType) {
           </div>
         </div>
       </Link>
-      <button
-        onClick={() => addToCart(product)}
-        className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-hover:opacity-100 group-focus-visible:opacity-100'
-      >
-        Add to cart
-      </button>
+      {items.find(item => item.id === product.id) ? (
+        <button
+          title='Delete item from cart'
+          className='absolute right-0 top-0 m-3 rounded bg-red-500 p-2 text-white opacity-0 shadow transition hover:bg-red-600 group-hover:opacity-100 group-focus-visible:opacity-100'
+        >
+          <TrashIcon />
+        </button>
+      ) : (
+        <button
+          onClick={() => addToCart(product)}
+          className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-hover:opacity-100 group-focus-visible:opacity-100'
+        >
+          Add to cart
+        </button>
+      )}
     </li>
   )
 }
