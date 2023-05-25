@@ -11,8 +11,6 @@ export default function ProductItem({ product }: ProductItemType) {
   const { title, price, rating, thumbnail } = product
   const { items, addToCart, removeFromCart } = useAppConfig()
 
-  console.log(items)
-
   return (
     <li className='group relative bg-white shadow focus-within:shadow-xl'>
       <Link
