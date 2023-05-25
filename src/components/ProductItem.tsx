@@ -52,7 +52,7 @@ export default function ProductItem({ product }: ProductItemType) {
       </Link>
       <button
         onClick={() => addToCart(product)}
-        className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-focus-within:opacity-100 group-hover:opacity-100'
+        className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-hover:opacity-100 group-focus-visible:opacity-100'
       >
         Add to cart
       </button>
