@@ -24,7 +24,7 @@ export default function ProductList() {
 
         <ul className='mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {products.map(product => (
-            <ProductItem key={product.id} {...product} />
+            <ProductItem key={product.id} product={product} />
           ))}
         </ul>
       </div>

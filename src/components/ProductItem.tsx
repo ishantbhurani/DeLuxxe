@@ -1,19 +1,15 @@
 import { Link } from 'react-router-dom'
 import StarIcon from '../assets/StarIcon'
+import { useAppConfig } from '../hooks/useAppConfig'
 
 interface ProductItemType {
-  thumbnail: string
-  title: string
-  price: number
-  rating: number
+  product: ItemType
 }
 
-export default function ProductItem({
-  thumbnail,
-  title,
-  price,
-  rating,
-}: ProductItemType) {
+export default function ProductItem({ product }: ProductItemType) {
+  const { title, price, rating, thumbnail } = product
+  const { addToCart } = useAppConfig()
+
   return (
     <li className='group relative bg-white shadow focus-within:shadow-xl'>
       <Link
@@ -55,7 +51,7 @@ export default function ProductItem({
         </div>
       </Link>
       <button
-        onClick={() => console.log('clicked')}
+        onClick={() => addToCart(product)}
         className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-focus-within:opacity-100 group-hover:opacity-100'
       >
         Add to cart
