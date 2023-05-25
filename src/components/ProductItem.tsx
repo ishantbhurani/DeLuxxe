@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import StarIcon from '../assets/StarIcon'
 
 interface ProductItemType {
@@ -15,7 +16,7 @@ export default function ProductItem({
 }: ProductItemType) {
   return (
     <li className='bg-white shadow'>
-      <a href='#' className='group block overflow-hidden rounded'>
+      <Link to='#' className='group block overflow-hidden rounded'>
         <div className='overflow-hidden'>
           <img
             src={thumbnail}
@@ -49,7 +50,7 @@ export default function ProductItem({
             })}
           </div>
         </div>
-      </a>
+      </Link>
     </li>
   )
 }
