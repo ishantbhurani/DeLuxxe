@@ -15,10 +15,10 @@ export default function ProductItem({
   rating,
 }: ProductItemType) {
   return (
-    <li className='bg-white shadow focus-within:shadow-xl'>
+    <li className='group relative bg-white shadow focus-within:shadow-xl'>
       <Link
         to='#'
-        className='group block overflow-hidden rounded outline-transparent'
+        className='block overflow-hidden rounded outline-transparent'
       >
         <div className='overflow-hidden'>
           <img
@@ -54,6 +54,12 @@ export default function ProductItem({
           </div>
         </div>
       </Link>
+      <button
+        onClick={() => console.log('clicked')}
+        className='absolute right-0 top-0 m-3 rounded bg-primary-500 p-2 text-white opacity-0 shadow transition hover:bg-primary-600 group-focus-within:opacity-100 group-hover:opacity-100'
+      >
+        Add to cart
+      </button>
     </li>
   )
 }
