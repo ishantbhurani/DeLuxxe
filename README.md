@@ -30,20 +30,20 @@ Users should be able to:
 
 ### Screenshot
 
-| ![Home Page](./screenshots/home-page.png) |
-| ----------------------------------------- |
+| ![Home Page](https://ishantbhurani.github.io/DeLuxxe/screenshots/home-page.png) |
+| ------------------------------------------------------------------------------- |
 
-| ![Home Page Mobile](./screenshots/home-page-mobile.png) |
-| ------------------------------------------------------- |
+| ![Home Page Mobile](https://ishantbhurani.github.io/DeLuxxe/screenshots/home-page-mobile.png) |
+| --------------------------------------------------------------------------------------------- |
 
-| ![Login Page](./screenshots/login-page.png) |
-| ------------------------------------------- |
+| ![Login Page](https://ishantbhurani.github.io/DeLuxxe/screenshots/login-page.png) |
+| --------------------------------------------------------------------------------- |
 
-| ![Login Page Mobile](./screenshots/login-page-mobile.png) |
-| --------------------------------------------------------- |
+| ![Login Page Mobile](https://ishantbhurani.github.io/DeLuxxe/screenshots/login-page-mobile.png) |
+| ----------------------------------------------------------------------------------------------- |
 
-| ![Loading Animation](./screenshots/loading.gif) |
-| ----------------------------------------------- |
+| ![Loading Animation](https://ishantbhurani.github.io/DeLuxxe/screenshots/loading.gif) |
+| ------------------------------------------------------------------------------------- |
 
 ### Links
 
