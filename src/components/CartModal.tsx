@@ -10,7 +10,7 @@ const CartModal = () => {
   const totalPrice = items.reduce((total, item) => total + item.price, 0)
   const tax = roundToTwo(totalPrice * 0.1) // 10% tax
   const discount = roundToTwo(totalPrice * 0.08) // 8% discount
-  const grandTotal = totalPrice + tax - discount
+  const grandTotal = roundToTwo(totalPrice + tax - discount)
 
   return (
     <section
@@ -36,7 +36,7 @@ const CartModal = () => {
                 <>
                   <ul className='space-y-4'>
                     {items.map(product => (
-                      <li className='flex items-center gap-4'>
+                      <li key={product.id} className='flex items-center gap-4'>
                         <img
                           src={product.thumbnail}
                           alt={product.title}
